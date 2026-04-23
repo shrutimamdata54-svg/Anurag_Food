@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #064E3B; /* Deep Green */
+  --color-brand-secondary: #F6941D; /* Golden Orange */
+  --color-brand-accent: #B91C1C; /* Professional Red */
+  --color-brand-light-green: #BBF7D0; /* Badge Green */
+  --color-brand-bg: #F9FAFB;
+  
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-bg text-slate-900 antialiased font-sans;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.shadow-card {
+  shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+}
+
+.rounded-3xl-plus {
+  border-radius: 2rem;
+}
+
